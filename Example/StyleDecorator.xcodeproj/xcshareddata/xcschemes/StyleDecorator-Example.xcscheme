@@ -52,6 +52,16 @@
                ReferencedContainer = "container:StyleDecorator.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "047B089E1E0EDEBD00ACAE43"
+               BuildableName = "StyleDecorator_ExampleTests.xctest"
+               BlueprintName = "StyleDecorator_ExampleTests"
+               ReferencedContainer = "container:StyleDecorator.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -16,15 +16,29 @@ class Tests: XCTestCase {
     
     func testExample() {
         // setup decorators
-        let black = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 13, weight: UIFontWeightBold)))
-//        let white = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightHeavy)).foregroundColor(.white).backgroundColor(.black))
-//        let gray = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 17, weight: UIFontWeightBlack)).foregroundColor(.gray))
+        let black = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 13, weight: UIFontWeightBold)).foregroundColor(.black))
+        let white = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightHeavy)).foregroundColor(.white).backgroundColor(.black))
+        let gray = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 17, weight: UIFontWeightBlack)).foregroundColor(.gray))
         
-        //let decoratedText = "We"~black~"Are"~white~"Pinto"~gray
+        let p1 = "We"~black
+        let p2 = "Are"~white
+        let p3 = "Pinto"~gray
+        let set = p1~p2~p3
+        let decoratedText = "We"~black~"Are"~white~"Pinto"~gray
         
-        //XCTAssertEqual(decoratedText.string, "WeArePinto")
+        print("^ --- output ---")
+        print(Array<String>(repeating: "\n", count: 3).joined())
+        //
+        print("2 parts: \((p1~p2).path)")
+        print("set: \(set.path)")
         
-        XCTAssertTrue(true)
+        
+        
+        //
+        print(Array<String>(repeating: "\n", count: 5).joined())
+        print("$ --- output ---")
+        
+        XCTAssertEqual(decoratedText.string, "WeArePinto")
         //XCTAssertEqual(decoratedText.styles.map { $0.font }, ["Black", "White", "Gray"])
     }
     

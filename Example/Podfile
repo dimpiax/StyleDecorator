@@ -1,11 +1,13 @@
 use_frameworks!
 
-target 'StyleDecorator_Example' do
+def pods
   pod 'StyleDecorator', :path => '../'
+end
 
-  target 'StyleDecorator_Tests' do
-    inherit! :search_paths
+target 'StyleDecorator_Example' do
+  pods
+end
 
-    
-  end
+target 'StyleDecorator_Tests' do
+  pods
 end

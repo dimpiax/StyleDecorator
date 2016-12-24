@@ -23,6 +23,10 @@ public struct Decorator {
         _attributes = attributes
     }
     
+    public var path: [Decorator]? {
+        return _path
+    }
+    
     public var styles: [(Attributes, NSRange)]? {
         guard var path = _path else { return nil }
         

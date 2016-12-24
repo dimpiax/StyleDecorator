@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		047B08AA1E0EEEF500ACAE43 /* StyleDecorator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047B08A91E0EEEF500ACAE43 /* StyleDecorator.framework */; };
 		3D959A36BAF292E94E1FA9ED /* Pods_StyleDecorator_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF819445D00992B0BBE5B9D6 /* Pods_StyleDecorator_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		047B08A91E0EEEF500ACAE43 /* StyleDecorator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StyleDecorator.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/StyleDecorator-btlgdycuppfdbnfwkhieyktupdhw/Build/Products/Debug-iphonesimulator/StyleDecorator/StyleDecorator.framework"; sourceTree = "<group>"; };
 		337829E256B5D690822F4CC6 /* Pods-StyleDecorator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StyleDecorator_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-StyleDecorator_Example/Pods-StyleDecorator_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* StyleDecorator_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StyleDecorator_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047B08AA1E0EEEF500ACAE43 /* StyleDecorator.framework in Frameworks */,
 				3D959A36BAF292E94E1FA9ED /* Pods_StyleDecorator_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +75,7 @@
 		00F03B77C69F9FAA5BD899D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				047B08A91E0EEEF500ACAE43 /* StyleDecorator.framework */,
 				8EEADF2E7121B0095A6586B5 /* Pods_StyleDecorator_Example.framework */,
 				AF819445D00992B0BBE5B9D6 /* Pods_StyleDecorator_Tests.framework */,
 			);
@@ -209,7 +213,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {

@@ -8,7 +8,21 @@
 
 import Foundation
 
-final public class Attributes {
+final public class Attributes: CustomStringConvertible {
+    public var description: String {
+        guard let color = raw[NSForegroundColorAttributeName] as? UIColor else {
+            return "no color"
+        }
+        
+        switch color {
+            case UIColor.black: return "black"
+            case UIColor.white: return "white"
+            case UIColor.gray: return "gray"
+            
+            default: return "unknown"
+        }
+    }
+    
     public fileprivate(set) var raw: [String: Any]! = [:]
     
     fileprivate var _paragraphStyle: NSMutableParagraphStyle?

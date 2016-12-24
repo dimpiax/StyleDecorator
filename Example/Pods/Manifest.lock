@@ -1,0 +1,16 @@
+PODS:
+  - StyleDecorator (0.1.0)
+
+DEPENDENCIES:
+  - StyleDecorator (from `../`)
+
+EXTERNAL SOURCES:
+  StyleDecorator:
+    :path: ../
+
+SPEC CHECKSUMS:
+  StyleDecorator: 535d15cf7a9d46a744a8f13c9cf2e36e0f9d5c9a
+
+PODFILE CHECKSUM: 5a2e39de7c4cd44f0ebdc5c8e3b69252ceccdaea
+
+COCOAPODS: 1.2.0.beta.1

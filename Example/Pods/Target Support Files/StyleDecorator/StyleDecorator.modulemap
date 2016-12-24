@@ -1,0 +1,6 @@
+framework module StyleDecorator {
+  umbrella header "StyleDecorator-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'StyleDecorator_Example' do
+  pod 'StyleDecorator', :path => '../'
+
+  target 'StyleDecorator_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

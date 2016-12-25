@@ -55,7 +55,8 @@ class ViewController: UIViewController {
             )
         )
         
-        let decoratedText = "Decorate your string easy"~a~"\n\n"~"We"~b~"Are"~c~"Pinto"~d~"\n\n"~"Ideas"~e~"\n"~"Thinking up smart ideas"~f
+        let titleText = "We"~b~"Are"~c~"Pinto"~d
+        let decoratedText = "Decorate your string easy"~a~"\n\n"~titleText~"\n\n"~"Ideas"~e~"\n"~"Thinking up smart ideas"~f~"\n\n\nwith default attributes"
         label.attributedText = NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)
         
         // layout

@@ -5,11 +5,38 @@
 [![License](https://img.shields.io/cocoapods/l/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
 [![Platform](https://img.shields.io/cocoapods/p/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
 
+Design string simply by linking attributes to needed part.
+<img src=thumbnail.png width=25% height=25% />
+
+## Usage
+Create `Decorator` with specific `Attributes` and link it at the end of needed string part 
+`"Style"~d1~"Decorator"~d2~"!"`
+
+## Example:
+```swift
+let a = Decorator(attributes: Attributes().foregroundColor(.black))
+let b = Decorator(attributes: Attributes().foregroundColor(.white))
+let c = Decorator(attributes: Attributes().foregroundColor(.gray))
+
+let decorated = "We"~a~"Are"~b~"Pinto"~c
+label.attributedText = NSAttributedString(decorator: decoratedText)
+```
+
+String can be designed dynamically:
+```swift
+let titleText = "We"~b~"Are"~c~"Pinto"~d
+let decoratedText = "Decorate your string easy"~a~"\n\n"~titleText~"\n\n"~"Ideas"~e~"\n"~"Thinking up smart ideas"~f~"\nwith default attributes"
+
+let defaultAttributes = Attributes()
+.font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightBlack))
+.alignment(.center).raw
+
+label.attributedText = NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)
+```
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 

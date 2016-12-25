@@ -22,14 +22,13 @@ public struct Decorator {
     
     public var styles: [(Attributes, NSRange)] {
         var location = 0
-        return flatten().map { value -> (Attributes, NSRange)? in
+        return flatten().flatMap { value -> (Attributes, NSRange)? in
             let count = value._text.characters.count
             defer { location += count }
             
             guard let attributes = value._attributes else { return nil }
             return (attributes, NSRange(location: location, length: count))
         }
-        .flatMap { $0 }
     }
     
     public var string: String {
@@ -68,12 +67,12 @@ public struct Decorator {
     }
 }
 
-precedencegroup Bind {
+precedencegroup Link {
     associativity: left
     higherThan: AssignmentPrecedence
 }
 
-infix operator ~: Bind
+infix operator ~: Link
 
 // first part
 public func ~(lhs: String, rhs: Decorator) -> Decorator {

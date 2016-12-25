@@ -57,6 +57,15 @@ public struct Decorator {
         
         return arr.reversed()
     }
+    
+    static fileprivate func setTailPath(_ value: Decorator, to parent: inout Decorator) {
+        if parent._path == nil {
+            parent._path = [value]
+            return
+        }
+        
+        setTailPath(value, to: &parent._path![0])
+    }
 }
 
 precedencegroup Bind {
@@ -76,20 +85,22 @@ public func ~(lhs: String, rhs: Decorator) -> Decorator {
 
 // interim part
 public func ~(lhs: Decorator, rhs: Decorator) -> Decorator {
-    var copy: Decorator!
-    
     if rhs._text == nil {
-        copy = lhs
+        var copy = lhs
         copy._attributes = rhs._attributes
-        
-        // TODO: with _path
+        return copy
     }
     else {
-        copy = rhs
-        copy._path = [lhs]
+        var copy = rhs, lcopy = lhs
+        
+        if copy._path != nil {
+            Decorator.setTailPath(lcopy, to: &copy._path![0])
+        }
+        else {
+            copy._path = [lcopy]
+        }
+        return copy
     }
-    
-    return copy
 }
 
 // last part

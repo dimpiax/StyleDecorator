@@ -108,7 +108,7 @@ public func ~(lhs: Decorator, rhs: String) -> Decorator {
     copy._text = rhs
     copy._attributes = nil
     
-    var copy2 = lhs
+    let copy2 = lhs
     copy._path = [copy2]
     
     return copy

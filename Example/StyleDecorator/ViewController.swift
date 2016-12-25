@@ -30,13 +30,15 @@ class ViewController: UIViewController {
             .alignment(.center).raw
         
         // setup decorators
-        let a = Decorator(attributes: Attributes().foregroundColor(.white).backgroundColor(.black).font(UIFont.systemFont(ofSize: 13, weight: UIFontWeightBold)))
+        let a = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 21, weight: UIFontWeightThin)).kerning(-0.5).backgroundColor(.darkGray).foregroundColor(.white).paragraphStyle(Paragraph().lineSpacing(5).alignment(.center).raw))
         
-        let b = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 23, weight: UIFontWeightMedium)).paragraphStyle(Paragraph().paragraphSpacing(10).hyphenationFactor(1).alignment(.right).raw))
+        let b = Decorator(attributes: Attributes().foregroundColor(.white).backgroundColor(.black).font(UIFont.systemFont(ofSize: 13, weight: UIFontWeightBold)))
         
-        let c = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 27, weight: UIFontWeightHeavy)).alignment(.right))
+        let c = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 23, weight: UIFontWeightMedium)).paragraphStyle(Paragraph().paragraphSpacing(10).hyphenationFactor(1).alignment(.right).raw))
         
-        let d = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)).alignment(.right).kerning(-0.5))
+        let d = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 27, weight: UIFontWeightHeavy)).alignment(.right))
+        
+        let f = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 16, weight: UIFontWeightThin)).alignment(.right).kerning(-0.5))
         
         let e = Decorator(attributes:
             Attributes()
@@ -48,18 +50,16 @@ class ViewController: UIViewController {
                 .underlineColor(.red)
                 .paragraphStyle(Paragraph()
                     .alignment(.right)
-                    //.lineSpacing(5)
+                    .lineSpacing(17)
                     .raw
             )
         )
         
-        let f = Decorator(attributes: Attributes().font(UIFont.systemFont(ofSize: 21, weight: UIFontWeightThin)).kerning(-0.5).backgroundColor(.darkGray).foregroundColor(.white).paragraphStyle(Paragraph().lineSpacing(5).alignment(.center).raw))
-        
-        let decoratedText = "Decorate your string easy"~f~"\n\n"~"We"~a~"Are"~b~"Pinto"~c~"\n\n"~"Ideas"~e~"\n"~"Thinking up smart ideas"~d
-        label.attributedText = try! NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)
+        let decoratedText = "Decorate your string easy"~a~"\n\n"~"We"~b~"Are"~c~"Pinto"~d~"\n\n"~"Ideas"~e~"\n"~"Thinking up smart ideas"~f
+        label.attributedText = NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)
         
         // layout
-        let views: [String: UIView] = ["label": label]
+        let views = ["label": label]
         views.forEach { $0.value.translatesAutoresizingMaskIntoConstraints = false }
         
         var layout = [NSLayoutConstraint]()

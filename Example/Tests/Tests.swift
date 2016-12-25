@@ -23,29 +23,18 @@ class Tests: XCTestCase {
         let p1 = "We"~black
         let p2 = "Are"~white
         let p3 = "Pinto"~gray
-        let set = p1~p2~p3
-        let decoratedText = "We"~black~"Are"~white~"Pinto"~gray
-        
-        print("^ --- output ---")
-        print(Array<String>(repeating: "\n", count: 3).joined())
-        //
-        print("2 parts: \((p1~p2).path)")
-        print("set: \(set.path)")
+        let set = p2~p1~p3~"😇?"
         
         
-        
-        //
-        print(Array<String>(repeating: "\n", count: 5).joined())
-        print("$ --- output ---")
-        
-        XCTAssertEqual(decoratedText.string, "WeArePinto")
-        //XCTAssertEqual(decoratedText.styles.map { $0.font }, ["Black", "White", "Gray"])
+        XCTAssertEqual(("We"~black~"Are"~white~"Pinto"~gray).string, "WeArePinto")
+        XCTAssertEqual(set.string, "AreWePinto😇?")
+
+        let colors = (set~"? "~p1~" "~p2~"!").styles.map { $0.0.raw[NSForegroundColorAttributeName] as! UIColor }
+        XCTAssertEqual(colors, [UIColor.white, UIColor.black, UIColor.gray, UIColor.black, UIColor.white])
     }
     
     func testPerformanceExample() {
-        // This is an example of a performance test case.
         self.measure() {
-            // Put the code you want to measure the time of here.
         }
     }
     

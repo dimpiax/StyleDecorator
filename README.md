@@ -1,5 +1,6 @@
 # StyleDecorator
 
+[![Language](https://img.shields.io/badge/swift-3.0-fec42e.svg)](https://swift.org/blog/swift-3-0-released/)
 [![CI Status](http://img.shields.io/travis/Pilipenko Dima/StyleDecorator.svg?style=flat)](https://travis-ci.org/Pilipenko Dima/StyleDecorator)
 [![Version](https://img.shields.io/cocoapods/v/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
 [![License](https://img.shields.io/cocoapods/l/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
@@ -27,7 +28,7 @@ label.attributedText = NSAttributedString(decorator: decoratedText)
 String can be designed dynamically:
 ```swift
 let titleText = "We"~b~"Are"~c~"Pinto"~d
-let decoratedText = "Decorate your string easy"~a~"\n\n"~titleText~"\n\n"~"Ideas"~e~"\n"~"Thinking up smart ideas"~f~"\nwith default attributes"
+let decoratedText = "Decorate your string easy"~a~"\n\n"~titleText~"\n\n"~"Ideas"~e~"\n"~"Thinking up smart ideas"~f~"\n\n\nwith default attributes"
 
 let defaultAttributes = Attributes()
 .font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightBlack))

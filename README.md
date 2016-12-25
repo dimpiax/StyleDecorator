@@ -6,6 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
 
 Design string simply by linking attributes to needed part.
+
 <img src=Example/StyleDecorator/Images.xcassets/thumbnail.imageset/thumbnail.png width=25% height=25% />
 
 ## Usage

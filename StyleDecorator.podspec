@@ -21,8 +21,7 @@ String can be designed dynamically:
 let titleText = "We"~b~"Are"~c~"Pinto"~d
 let decoratedText = "Decorate your string easy"~a~"\n\n"~titleText~"\n\n"~"Ideas"~e~"\n"~"Thinking up smart ideas"~f~"\nwith default attributes"
 
-let defaultAttributes = Attributes()
-    .font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightBlack))
+let defaultAttributes = Attributes().font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightBlack))
     .alignment(.center).raw
 
 label.attributedText = NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)

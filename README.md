@@ -6,10 +6,11 @@
 [![Platform](https://img.shields.io/cocoapods/p/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
 
 Design string simply by linking attributes to needed part.
-<img src=thumbnail.png width=25% height=25% />
+<img src=Example/StyleDecorator/Images.xcassets/thumbnail.imageset/thumbnail.png width=25% height=25% />
 
 ## Usage
-Create `Decorator` with specific `Attributes` and link it at the end of needed string part 
+Create `Decorator` with specific `Attributes` and link it at the end of needed string part:
+
 `"Style"~d1~"Decorator"~d2~"!"`
 
 ## Example:

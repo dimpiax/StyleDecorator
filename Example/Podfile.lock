@@ -6,11 +6,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   StyleDecorator:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  StyleDecorator: 535d15cf7a9d46a744a8f13c9cf2e36e0f9d5c9a
+  StyleDecorator: 38efe8049798bd52f7e479f5520df1f95c46c96d
 
 PODFILE CHECKSUM: bfba22c3d5bb5acd9eac481062efff527924dab8
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.1.1

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'StyleDecorator'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Kindly styling of text through decorating string'
   s.description      = <<-DESC
 Design string simply by linking attributes to needed part.
@@ -8,9 +8,9 @@ Design string simply by linking attributes to needed part.
 
 Example:
 ```swift
-let a = Decorator(attributes: Attributes().foregroundColor(.black))
-let b = Decorator(attributes: Attributes().foregroundColor(.white))
-let c = Decorator(attributes: Attributes().foregroundColor(.gray))
+let a = Decorator(style: Style().foregroundColor(.black))
+let b = Decorator(style: Style().foregroundColor(.white))
+let c = Decorator(style: Style().foregroundColor(.gray))
 
 let decorated = "We"~a~"Are"~b~"Pinto"~c
 label.attributedText = NSAttributedString(decorator: decoratedText)
@@ -21,8 +21,8 @@ String can be designed dynamically:
 let titleText = "We"~b~"Are"~c~"Pinto"~d
 let decoratedText = "Decorate your string easy"~a~"\n\n"~titleText~"\n\n"~"Ideas"~e~"\n"~"Thinking up smart ideas"~f~"\n\n\nwith default attributes"
 
-let defaultAttributes = Attributes().font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightBlack))
-    .alignment(.center).raw
+let defaultAttributes = Style().font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightBlack))
+    .alignment(.center).attributes
 
 label.attributedText = NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)
 ```

@@ -9,11 +9,18 @@
 import Foundation
 import UIKit
 
+/// AD
 extension NSAttributedString {
+    /**
+     The NSMutableAttributedString class convenience initializer which accepts decorater text as first parameter.
+     
+     - Parameter decorator: decorated text
+     - Parameter attributes: native attributes
+     */
     public convenience init(decorator: Decorator, attributes: [String: Any]? = nil) {
         // TODO: throw exception if decorator is wrong
         let mutable = NSMutableAttributedString(string: decorator.string, attributes: attributes)
-        decorator.styles.forEach { mutable.addAttributes($0.0.raw, range: $0.1) }
+        decorator.styles.forEach { mutable.addAttributes($0.0.attributes, range: $0.1) }
         
         self.init(attributedString: mutable.copy() as! NSAttributedString)
     }

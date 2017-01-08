@@ -8,29 +8,33 @@
 
 import Foundation
 
+/// D
 public struct Decorator {
     fileprivate var _path: [Decorator]?
     
-    fileprivate var _attributes: Attributes?
+    fileprivate var _style: Style?
     
     // always filled, except raw decorator
     fileprivate var _text: String!
     
-    public init(attributes: Attributes) {
-        _attributes = attributes
+    /// Accepts Style instance
+    public init(style: Style) {
+        _style = style
     }
     
-    public var styles: [(Attributes, NSRange)] {
+    /// Retrieves array with attributes for specific range
+    public var styles: [(Style, NSRange)] {
         var location = 0
-        return flatten().flatMap { value -> (Attributes, NSRange)? in
+        return flatten().flatMap { value -> (Style, NSRange)? in
             let count = value._text.characters.count
             defer { location += count }
             
-            guard let attributes = value._attributes else { return nil }
+            guard let attributes = value._style else { return nil }
             return (attributes, NSRange(location: location, length: count))
         }
     }
     
+    /// Retrieves raw string
     public var string: String {
         return flatten().map { $0._text }.reduce("", +)
     }
@@ -75,6 +79,7 @@ precedencegroup Link {
 infix operator ~: Link
 
 // first part
+/// Concatenation operator
 public func ~(lhs: String, rhs: Decorator) -> Decorator {
     var copy = rhs
     copy._text = lhs
@@ -83,10 +88,11 @@ public func ~(lhs: String, rhs: Decorator) -> Decorator {
 }
 
 // interim part
+/// Concatenation operator
 public func ~(lhs: Decorator, rhs: Decorator) -> Decorator {
     if rhs._text == nil {
         var copy = lhs
-        copy._attributes = rhs._attributes
+        copy._style = rhs._style
         return copy
     }
     else {
@@ -103,10 +109,11 @@ public func ~(lhs: Decorator, rhs: Decorator) -> Decorator {
 }
 
 // last part
+/// Concatenation operator
 public func ~(lhs: Decorator, rhs: String) -> Decorator {
     var copy = lhs
     copy._text = rhs
-    copy._attributes = nil
+    copy._style = nil
     
     let copy2 = lhs
     copy._path = [copy2]

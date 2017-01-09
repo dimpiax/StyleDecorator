@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-/// AD
+/// NSAttributedString extension for accepting `Decorator` struct and its transformation into native approach 
 extension NSAttributedString {
     /**
-     The NSMutableAttributedString class convenience initializer which accepts decorater text as first parameter.
+     The NSAttributedString class convenience initializer which accepts decorater text as first parameter.
      
      - Parameter decorator: decorated text
      - Parameter attributes: native attributes

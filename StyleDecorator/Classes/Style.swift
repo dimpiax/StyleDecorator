@@ -1,5 +1,5 @@
 //
-//  Attributes.swift
+//  Style.swift
 //  Pods
 //
 //  Created by Pilipenko Dima on 12/24/16.
@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-/// Attributes class for easy text view setup
-
+/// Style class for easy text view attributes setup
 final public class Style {
     /// Dictionary with native attributes
     public fileprivate(set) var attributes: [String: Any]! = [:]

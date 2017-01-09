@@ -15,7 +15,7 @@
 		C0726980233B99A837AF9FC040FFD75C /* Pods-StyleDecorator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4024E42BC5014D2BA96DB083570C45 /* Pods-StyleDecorator_Tests-dummy.m */; };
 		C2730AF73648C63F53E18BD3DEAD11CD /* Pods-StyleDecorator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA30646B5A8D0C0FAA7B59A4348BF91 /* Pods-StyleDecorator_Example-dummy.m */; };
 		C5F419ADBD5FA8552A1AE2AF9BF42DFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		C8B1E33D3560EC8A2955117E550C6445 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51779EA815D11E10FB9DAE7DCBF3CA /* Attributes.swift */; };
+		C8B1E33D3560EC8A2955117E550C6445 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF51779EA815D11E10FB9DAE7DCBF3CA /* Style.swift */; };
 		D732C992F06BAFF0A96F85121DDCF939 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		DC18CE47BFD477671810DA5AE9B5C39C /* StyleDecorator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B863B91BD5870851F194BA7C428465E /* StyleDecorator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F590D852E084BD3541CC2BBD9EFB6008 /* NSAttributedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6707F5E18DEB7AA185CE710F59AF088 /* NSAttributedString+.swift */; };
@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		12250735B1CA5092FC7D47B2002DD0BA /* StyleDecorator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StyleDecorator.framework; path = StyleDecorator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		12250735B1CA5092FC7D47B2002DD0BA /* StyleDecorator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StyleDecorator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1746D6227B4E310FE3B0D71C1778A91B /* StyleDecorator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StyleDecorator.xcconfig; sourceTree = "<group>"; };
 		17AB713A4EB36A3674763E9EC37CE9EE /* Pods-StyleDecorator_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StyleDecorator_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		19B8E614CBE0CF2090EF317B11717681 /* Decorator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
@@ -61,20 +61,20 @@
 		8C05F0F6B2828AC63521C2B588079AB6 /* Pods-StyleDecorator_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StyleDecorator_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		8D2D5D8FD859BC807B492A8BC5694EC4 /* Pods-StyleDecorator_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StyleDecorator_Tests-resources.sh"; sourceTree = "<group>"; };
 		92F70B8225C288D4D3BA6E22D6A0D8ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		939E52B8BEE92A2C2E395494F092987D /* StyleDecorator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = StyleDecorator.modulemap; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96979EF45BED01947751C90EACE0BD52 /* Pods_StyleDecorator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StyleDecorator_Example.framework; path = "Pods-StyleDecorator_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		939E52B8BEE92A2C2E395494F092987D /* StyleDecorator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = StyleDecorator.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96979EF45BED01947751C90EACE0BD52 /* Pods_StyleDecorator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StyleDecorator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D12F424A5DA726C8724453FC3450814 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D1586A02DEA5A683514663F8B0DFC27 /* Pods_StyleDecorator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StyleDecorator_Tests.framework; path = "Pods-StyleDecorator_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC5C7748D9D1CDEDFF1AC1CF8625E6CA /* Pods-StyleDecorator_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-StyleDecorator_Example.modulemap"; sourceTree = "<group>"; };
-		BF51779EA815D11E10FB9DAE7DCBF3CA /* Attributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
+		9D1586A02DEA5A683514663F8B0DFC27 /* Pods_StyleDecorator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StyleDecorator_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC5C7748D9D1CDEDFF1AC1CF8625E6CA /* Pods-StyleDecorator_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-StyleDecorator_Example.modulemap"; sourceTree = "<group>"; };
+		BF51779EA815D11E10FB9DAE7DCBF3CA /* Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		C6707F5E18DEB7AA185CE710F59AF088 /* NSAttributedString+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		E1C6AF1DD58BF6759149C35E56E1F095 /* StyleDecorator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StyleDecorator-dummy.m"; sourceTree = "<group>"; };
 		E6982FDDA2708079E46CE30280152DB3 /* Pods-StyleDecorator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StyleDecorator_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E7CAA6C167B251B9EF3C88AC8DD86177 /* Pods-StyleDecorator_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StyleDecorator_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F20B45569E016AD34D9470A7682508F3 /* Pods-StyleDecorator_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StyleDecorator_Example-resources.sh"; sourceTree = "<group>"; };
-		FC14DEE4E852AEB15E73E102B2C0039B /* Pods-StyleDecorator_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-StyleDecorator_Tests.modulemap"; sourceTree = "<group>"; };
+		FC14DEE4E852AEB15E73E102B2C0039B /* Pods-StyleDecorator_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-StyleDecorator_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,12 +158,11 @@
 		55ECA493F508986A7DB89D1B3E216F24 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BF51779EA815D11E10FB9DAE7DCBF3CA /* Attributes.swift */,
+				BF51779EA815D11E10FB9DAE7DCBF3CA /* Style.swift */,
 				19B8E614CBE0CF2090EF317B11717681 /* Decorator.swift */,
 				C6707F5E18DEB7AA185CE710F59AF088 /* NSAttributedString+.swift */,
 				7D44D026EB91EC49F7B04D52038020BD /* Paragraph.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -227,7 +226,6 @@
 			children = (
 				55ECA493F508986A7DB89D1B3E216F24 /* Classes */,
 			);
-			name = StyleDecorator;
 			path = StyleDecorator;
 			sourceTree = "<group>";
 		};
@@ -356,7 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8B1E33D3560EC8A2955117E550C6445 /* Attributes.swift in Sources */,
+				C8B1E33D3560EC8A2955117E550C6445 /* Style.swift in Sources */,
 				7C1FF756BA5B489FF29E1927A82E9036 /* Decorator.swift in Sources */,
 				F590D852E084BD3541CC2BBD9EFB6008 /* NSAttributedString+.swift in Sources */,
 				605B9417720026B145D7DDDC457D76B8 /* Paragraph.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// D
+/// Decorator struct served for text decoration, which accepts `Style` instance and retrieves chain of styles and string
 public struct Decorator {
     fileprivate var _path: [Decorator]?
     

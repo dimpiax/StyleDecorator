@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-/// D
+/// Paragraph class for easy paragraph style attributes setup
 final public class Paragraph {
     fileprivate var _paragraphStyle: NSMutableParagraphStyle! = NSMutableParagraphStyle()
     

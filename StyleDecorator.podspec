@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'StyleDecorator'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'Kindly styling of text through decorating string'
   s.description      = <<-DESC
 Design string simply by linking attributes to needed part.
@@ -12,7 +12,7 @@ let a = Decorator(style: Style().foregroundColor(.black))
 let b = Decorator(style: Style().foregroundColor(.white))
 let c = Decorator(style: Style().foregroundColor(.gray))
 
-let decorated = "We"~a~"Are"~b~"Pinto"~c
+let decoratedText = "We"~a~"Are"~b~"Pinto"~c
 label.attributedText = NSAttributedString(decorator: decoratedText)
 ```
 

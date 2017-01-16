@@ -17,9 +17,17 @@ public struct Decorator {
     // always filled, except raw decorator
     fileprivate var _text: String!
     
-    /// Accepts Style instance
+    /// Accepts `Style` instance
+    /// - Parameter style: `Style` instance for decorating potential string in suffix concatenation
     public init(style: Style) {
         _style = style
+    }
+    
+    /// Accepts text.
+    ///
+    /// Only for `fileprivate` use
+    fileprivate init(text: String) {
+        _text = text
     }
     
     /// Retrieves array with attributes for specific range
@@ -81,10 +89,14 @@ infix operator ~: Link
 // first part
 /// Concatenation operator
 public func ~(lhs: String, rhs: Decorator) -> Decorator {
-    var copy = rhs
-    copy._text = lhs
-    
-    return copy
+    if rhs._text == nil {
+        var copy = rhs
+        copy._text = lhs
+        return copy
+    }
+    else {
+        return Decorator(text: lhs)~rhs
+    }
 }
 
 // interim part

@@ -14,7 +14,6 @@ class Tests: XCTestCase {
         let p3 = "Pinto"~gray
         let set = p2~p1~p3~"😇?"
         
-        
         XCTAssertEqual(("We"~black~"Are"~white~"Pinto"~gray).string, "WeArePinto")
         XCTAssertEqual(set.string, "AreWePinto😇?")
 
@@ -42,6 +41,10 @@ class Tests: XCTestCase {
         XCTAssertEqual(t4.string, "123415")
         XCTAssertEqual(t5.string, "1234150001512341512341")
         XCTAssertEqual(t6.string, "1511000123415")
+        
+        // setup styles with default one
+        let t7 = "default "~("and custom"~a)
+        XCTAssertEqual(t7.string, "default and custom")
     }
     
     func testPerformanceExample() {

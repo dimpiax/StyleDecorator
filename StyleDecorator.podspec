@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'StyleDecorator'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'Kindly styling of text through decorating string'
   s.description      = <<-DESC
 Design string simply by linking attributes to needed part.

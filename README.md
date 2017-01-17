@@ -21,7 +21,7 @@ let a = Decorator(style: Style().foregroundColor(.black))
 let b = Decorator(style: Style().foregroundColor(.white))
 let c = Decorator(style: Style().foregroundColor(.gray))
 
-let decorated = "We"~a~"Are"~b~"Pinto"~c
+let decoratedText = "We"~a~"Are"~b~"Pinto"~c
 label.attributedText = NSAttributedString(decorator: decoratedText)
 ```
 

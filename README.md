@@ -6,23 +6,27 @@
 [![License](https://img.shields.io/cocoapods/l/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
 [![Platform](https://img.shields.io/cocoapods/p/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
 
-Design string simply by linking attributes to needed part.
+Design string simply by linking attributes.
 
 <img src=Example/StyleDecorator/Images.xcassets/thumbnail.imageset/thumbnail.png width=25% height=25% />
 
 ## Usage
-Create `Decorator` with specific `Style` and link it at the end of needed string part:
+Create `Decorator` with specific `Style` and link it at the end of needed string or wrap for styling:
 
-`"Style"+d1+"Decorator"+d2+"!"`
-
-## Example:
 ```swift
-let a = Decorator(style: Style().foregroundColor(.black))
+"Style" + d1 + "Decorator" + d2 + "!"
+// or
+d1.wrap("Style") + d2.wrap("Decorator") + "!"
+```
+
+Example:
+```swift
+let a = Decorator(style: Style().foregroundColor(.black).kerning(-0.5).backgroundColor(.darkGray))
 let b = Decorator(style: Style().foregroundColor(.white))
-let c = Decorator(style: Style().foregroundColor(.gray))
+let c = Decorator(style: Style().foregroundColor(.gray).alignment(.right))
 
 // You can write in syntax you prefer
-let decoratedText = "We"+a+"Are"+b+"Pinto"+c
+let decoratedText = "We" + a + "Are" + b + "Pinto" + c
 label.attributedText = NSAttributedString(decorator: decoratedText)
 
 // or
@@ -33,11 +37,15 @@ label.attributedText = NSAttributedString(decorator: decoratedText2)
 
 String can be designed dynamically:
 ```swift
-let titleText = "! "+("We"+b+"Are"+c+"Pinto"+d)
-let decoratedText = "Decorate your string easy"+a+"\n\n"+titleText+"\n\n"+"Ideas"+e+"\n"+"Thinking up smart ideas"+f+"\n\n\nwith default attributes"
+// check Example for detailed code, where created 'd', 'e', 'f' etc
 
-let defaultAttributes = Style().font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightBlack))
-.alignment(.center).attributes
+let titleText = "! " + ("We" + b + "Are" + c + "Pinto" + d)
+let decoratedText = "Decorate your string easy" + a + "\n\n" + titleText + "\n\n" + "Ideas" + e + "\n" + "Thinking up smart ideas" + f + "\n\n\nwith default attributes"
+
+let defaultAttributes = Style()
+    .font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightBlack))
+    .alignment(.center)
+    .attributes
 
 label.attributedText = NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)
 ```

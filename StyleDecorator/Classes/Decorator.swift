@@ -47,6 +47,11 @@ public struct Decorator {
         return flatten().map { $0._text }.reduce("", +)
     }
     
+    /// Get wrapper closure
+    public var wrap: (String) -> Decorator {
+        return { $0 + self }
+    }
+    
     // PRIVATE
     private func flatten() -> [Decorator] {
         var arr = [Decorator]()
@@ -88,20 +93,20 @@ infix operator ~: Link
 
 // first part
 /// Concatenation operator
-public func ~(lhs: String, rhs: Decorator) -> Decorator {
+public func +(lhs: String, rhs: Decorator) -> Decorator {
     if rhs._text == nil {
         var copy = rhs
         copy._text = lhs
         return copy
     }
     else {
-        return Decorator(text: lhs)~rhs
+        return Decorator(text: lhs)+rhs
     }
 }
 
 // interim part
 /// Concatenation operator
-public func ~(lhs: Decorator, rhs: Decorator) -> Decorator {
+public func +(lhs: Decorator, rhs: Decorator) -> Decorator {
     if rhs._text == nil {
         var copy = lhs
         copy._style = rhs._style
@@ -122,7 +127,7 @@ public func ~(lhs: Decorator, rhs: Decorator) -> Decorator {
 
 // last part
 /// Concatenation operator
-public func ~(lhs: Decorator, rhs: String) -> Decorator {
+public func +(lhs: Decorator, rhs: String) -> Decorator {
     var copy = lhs
     copy._text = rhs
     copy._style = nil

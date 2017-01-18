@@ -13,7 +13,7 @@ Design string simply by linking attributes to needed part.
 ## Usage
 Create `Decorator` with specific `Style` and link it at the end of needed string part:
 
-`"Style"~d1~"Decorator"~d2~"!"`
+`"Style"+d1+"Decorator"+d2+"!"`
 
 ## Example:
 ```swift
@@ -21,14 +21,20 @@ let a = Decorator(style: Style().foregroundColor(.black))
 let b = Decorator(style: Style().foregroundColor(.white))
 let c = Decorator(style: Style().foregroundColor(.gray))
 
-let decoratedText = "We"~a~"Are"~b~"Pinto"~c
+// You can write in syntax you prefer
+let decoratedText = "We"+a+"Are"+b+"Pinto"+c
 label.attributedText = NSAttributedString(decorator: decoratedText)
+
+// or
+let a1 = a.wrap, b1 = b.wrap, c1 = c.wrap
+let decoratedText2 = a1("We") + b1("Are") + c1("Pinto")
+label.attributedText = NSAttributedString(decorator: decoratedText2)
 ```
 
 String can be designed dynamically:
 ```swift
-let titleText = "! "~("We"~b~"Are"~c~"Pinto"~d)
-let decoratedText = "Decorate your string easy"~a~"\n\n"~titleText~"\n\n"~"Ideas"~e~"\n"~"Thinking up smart ideas"~f~"\n\n\nwith default attributes"
+let titleText = "! "+("We"+b+"Are"+c+"Pinto"+d)
+let decoratedText = "Decorate your string easy"+a+"\n\n"+titleText+"\n\n"+"Ideas"+e+"\n"+"Thinking up smart ideas"+f+"\n\n\nwith default attributes"
 
 let defaultAttributes = Style().font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightBlack))
 .alignment(.center).attributes

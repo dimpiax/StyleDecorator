@@ -55,9 +55,17 @@ class ViewController: UIViewController {
             )
         )
         
-        let titleText = "! "~("We"~b~"Are"~c~"Pinto"~d)
-        let decoratedText = "Decorate your string easy"~a~"\n\n"~titleText~"\n\n"~"Ideas"~e~"\n"~"Thinking up smart ideas"~f~"\n\n\nwith default attributes"
+        // You can write in syntax you prefer
+        // case 1
+        let titleText = "! "+("We"+b+"Are"+c+"Pinto"+d)
+        let decoratedText = "Decorate your string easy"+a+"\n\n"+titleText+"\n\n"+"Ideas"+e+"\n"+"Thinking up smart ideas"+f+"\n\n\nwith default attributes"
         label.attributedText = NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)
+        
+        // case 2
+        let a1 = a.wrap, b1 = b.wrap, c1 = c.wrap, d1 = d.wrap, e1 = e.wrap, f1 = f.wrap
+        let titleText2 = "! "+b1("We")+c1("Are")+d1("Pinto")
+        let decoratedText2 = a1("Decorate your string easy")+"\n\n"+titleText2+"\n\n"+e1("Ideas")+"\n"+f1("Thinking up smart ideas")+"\n\n\nwith default attributes"
+        label.attributedText = NSAttributedString(decorator: decoratedText2, attributes: defaultAttributes)
         
         // layout
         let views = ["label": label]

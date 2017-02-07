@@ -84,13 +84,6 @@ public struct Decorator {
     }
 }
 
-precedencegroup Link {
-    associativity: left
-    higherThan: AssignmentPrecedence
-}
-
-infix operator ~: Link
-
 // first part
 /// Concatenation operator
 public func +(lhs: String, rhs: Decorator) -> Decorator {
@@ -99,9 +92,8 @@ public func +(lhs: String, rhs: Decorator) -> Decorator {
         copy._text = lhs
         return copy
     }
-    else {
-        return Decorator(text: lhs)+rhs
-    }
+    
+    return Decorator(text: lhs)+rhs
 }
 
 // interim part
@@ -112,28 +104,24 @@ public func +(lhs: Decorator, rhs: Decorator) -> Decorator {
         copy._style = rhs._style
         return copy
     }
-    else {
-        var copy = rhs, lcopy = lhs
-        
-        if copy._path != nil {
-            Decorator.setTailPath(lcopy, to: &copy._path![0])
-        }
-        else {
-            copy._path = [lcopy]
-        }
-        return copy
+    
+    var copy = rhs, lcopy = lhs
+    if copy._path != nil {
+        Decorator.setTailPath(lcopy, to: &copy._path![0])
     }
+    else {
+        copy._path = [lcopy]
+    }
+    return copy
 }
 
 // last part
 /// Concatenation operator
 public func +(lhs: Decorator, rhs: String) -> Decorator {
-    var copy = lhs
-    copy._text = rhs
-    copy._style = nil
+    let lcopy = lhs
     
-    let copy2 = lhs
-    copy._path = [copy2]
+    var copy = Decorator(text: rhs)
+    copy._path = [lcopy]
     
     return copy
 }

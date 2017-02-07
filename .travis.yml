@@ -4,15 +4,16 @@
 
 language: objective-c
 cache: cocoapods
-rvm: 2.2.2
+rvm: 2.0.0
 osx_image: xcode8
 
 podfile: Example/Podfile
 
-#before_install:
-#- gem install cocoapods # Since Travis is not always on latest version
-#- pod install --project-directory=Example
+before_install:
+  - gem install cocoapods # Since Travis is not always on latest version
+  - pod install --project-directory=Example
 
 script:
-- set -o pipefail && xcodebuild test -workspace Example/StyleDecorator.xcworkspace -scheme StyleDecorator-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+# - set -o pipefail && xcodebuild test -workspace Example/StyleDecorator.xcworkspace -scheme StyleDecorator-Example -destination 'platform=iOS Simulator,OS=9.0,name=iPhone 5' ONLY_ACTIVE_ARCH=NO | xcpretty -f `xcpretty-travis-formatter`
+  - xcodebuild test -workspace Example/StyleDecorator.xcworkspace -scheme StyleDecorator-Example -destination 'platform=iOS Simulator,OS=9.0,name=iPhone 5' ONLY_ACTIVE_ARCH=NO
+  - pod lib lint

@@ -57,14 +57,26 @@ class ViewController: UIViewController {
         
         // You can write in syntax you prefer
         // case 1
-        let titleText = "! "+("We"+b+"Are"+c+"Pinto"+d)
-        let decoratedText = "Decorate your string easy"+a+"\n\n"+titleText+"\n\n"+"Ideas"+e+"\n"+"Thinking up smart ideas"+f+"\n\n\nwith default attributes"
+        let part = "We"+b+"Are"+c+"Pinto"+d
+        let titleText = "! "+part
+        var decoratedText = "Decorate your string easy"+a
+            decoratedText = decoratedText+"\n\n"+titleText
+            decoratedText = decoratedText+"\n\n"+"Ideas"
+            decoratedText = decoratedText+e+"\n"+"Thinking up smart ideas"
+            decoratedText = decoratedText+f+"\n\n\nwith default attributes"
+        
         label.attributedText = NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)
         
         // case 2
         let a1 = a.wrap, b1 = b.wrap, c1 = c.wrap, d1 = d.wrap, e1 = e.wrap, f1 = f.wrap
         let titleText2 = "! "+b1("We")+c1("Are")+d1("Pinto")
-        let decoratedText2 = a1("Decorate your string easy")+"\n\n"+titleText2+"\n\n"+e1("Ideas")+"\n"+f1("Thinking up smart ideas")+"\n\n\nwith default attributes"
+        let partA1 = a1("Decorate your string easy")
+        let partE1 = e1("Ideas")
+        let partF1 = f1("Thinking up smart ideas")
+        var decoratedText2 = partA1+"\n\n"
+            decoratedText2 = decoratedText2+titleText2+"\n\n"
+            decoratedText2 = decoratedText2+partE1
+            decoratedText2 = "\n"+partF1+"\n\n\nwith default attributes"
         label.attributedText = NSAttributedString(decorator: decoratedText2, attributes: defaultAttributes)
         
         // layout

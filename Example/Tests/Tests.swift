@@ -37,7 +37,8 @@ class Tests: XCTestCase {
 
         let t1 = "1"+a
         let t2 = t1+"5"
-        let t3 = t1+"2"+b+"3"+b+"4"
+        let t3_0 = t1+"2"
+        let t3 = t3_0+b+"3"+b+"4"
         let t4 = t3+t2
         let t5 = t3+t2+"000"+t2+t4+t3+t1
         let t6 = t2+t1+t1+"000"+t4
@@ -61,11 +62,13 @@ class Tests: XCTestCase {
         self.measure() {
             let t1 = "1"+a
             let t2 = t1+"5"
-            let t3 = t1+"2"+b+"3"+b+"4"
+            let t3_0 = t1+"2"
+            let t3 = t3_0+b+"3"+b+"4"
             let t4 = t3+t2
             let t5 = t3+t2+"000"+t2+t4+t3+t1
             let t6 = t2+t1+t1+"000"+t4
-            let t7 = t1+t2+t3+t4+t5+t6+"."
+            let t7_0 = t1+t2+t3
+            let t7 = t7_0+t4+t5+t6+"."
             print(t7.string)
         }
     }

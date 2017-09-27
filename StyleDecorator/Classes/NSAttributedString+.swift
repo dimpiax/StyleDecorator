@@ -17,7 +17,7 @@ extension NSAttributedString {
      - Parameter decorator: decorated text
      - Parameter attributes: native attributes
      */
-    public convenience init(decorator: Decorator, attributes: [String: Any]? = nil) {
+    public convenience init(decorator: Decorator, attributes: [NSAttributedStringKey: Any]? = nil) {
         // TODO: throw exception if decorator is wrong
         let mutable = NSMutableAttributedString(string: decorator.string, attributes: attributes)
         decorator.styles.forEach { mutable.addAttributes($0.0.attributes, range: $0.1) }

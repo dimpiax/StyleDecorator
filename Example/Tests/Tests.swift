@@ -5,9 +5,9 @@ import StyleDecorator
 class Tests: XCTestCase {
     func testExample() {
         // setup decorators
-        let black = Decorator(style: Style().font(UIFont.systemFont(ofSize: 13, weight: UIFontWeightBold)).foregroundColor(.black))
-        let white = Decorator(style: Style().font(UIFont.systemFont(ofSize: 15, weight: UIFontWeightHeavy)).foregroundColor(.white).backgroundColor(.black))
-        let gray = Decorator(style: Style().font(UIFont.systemFont(ofSize: 17, weight: UIFontWeightBlack)).foregroundColor(.gray))
+        let black = Decorator(style: Style().font(UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.bold)).foregroundColor(.black))
+        let white = Decorator(style: Style().font(UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.heavy)).foregroundColor(.white).backgroundColor(.black))
+        let gray = Decorator(style: Style().font(UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.black)).foregroundColor(.gray))
         
         let p1 = "We"+black
         let p2 = "Are"+white
@@ -24,7 +24,7 @@ class Tests: XCTestCase {
         XCTAssertEqual(("We"+black+"Are"+white+"Pinto"+gray).string, "WeArePinto")
         XCTAssertEqual(set.string, "AreWePinto😇?")
 
-        let colors = (set+"? "+p1+" "+p2+"!").styles.map { $0.0.attributes[NSForegroundColorAttributeName] as! UIColor }
+        let colors = (set+"? "+p1+" "+p2+"!").styles.map { $0.0.attributes[NSAttributedStringKey.foregroundColor] as! UIColor }
         XCTAssertEqual(colors, [UIColor.white, UIColor.black, UIColor.gray, UIColor.black, UIColor.white])
 
         let a = Decorator(style: Style().foregroundColor(.red))
@@ -32,7 +32,7 @@ class Tests: XCTestCase {
             Style()
                 .foregroundColor(.black)
                 .backgroundColor(.white)
-                .font(UIFont.systemFont(ofSize: 13, weight: UIFontWeightBold))
+                .font(UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.bold))
         )
 
         let t1 = "1"+a

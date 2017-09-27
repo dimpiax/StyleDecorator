@@ -10,7 +10,8 @@ Design string simply by linking attributes.
 
 <img src=Example/StyleDecorator/Images.xcassets/thumbnail.imageset/thumbnail.png width=25% height=25% />
 
-## Usage
+## Example
+
 Create `Decorator` with specific `Style` and link it at the end of needed string or wrap for styling:
 
 ```swift
@@ -50,9 +51,11 @@ let defaultAttributes = Style()
 label.attributedText = NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)
 ```
 
-## Example
+## Requirements
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Updated to Swift 4
+
+###### For Swift 3.1 version use [v.0.3.0](../../releases/tag/0.3.0)
 
 ## Installation
 

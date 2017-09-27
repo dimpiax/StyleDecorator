@@ -12,7 +12,7 @@ import UIKit
 /// Style class for easy text view attributes setup
 final public class Style {
     /// Dictionary with native attributes
-    public fileprivate(set) var attributes: [String: Any]! = [:]
+    public fileprivate(set) var attributes: [NSAttributedStringKey: Any]! = [:]
     
     fileprivate var _paragraphStyle: NSMutableParagraphStyle?
     
@@ -25,7 +25,7 @@ final public class Style {
      - Parameter value: exist font. Example: UIFont.systemFont(ofSize: 17)
      */
     public func font(_ value: UIFont) -> Self {
-        attributes[NSFontAttributeName] = value
+        attributes[.font] = value
         return self
     }
     
@@ -34,7 +34,7 @@ final public class Style {
      */
     public func paragraphStyle(_ value: NSMutableParagraphStyle) -> Self {
         _paragraphStyle = value
-        attributes[NSParagraphStyleAttributeName] = value
+        attributes[.paragraphStyle] = value
         return self
     }
     
@@ -42,7 +42,7 @@ final public class Style {
      The value of this attribute is a UIColor object. Use this attribute to specify the color of the text during rendering. If you do not specify this attribute, the text is rendered in black.
      */
     public func foregroundColor(_ value: UIColor?) -> Self {
-        attributes[NSForegroundColorAttributeName] = value
+        attributes[.foregroundColor] = value
         return self
     }
     
@@ -50,7 +50,7 @@ final public class Style {
      The value of this attribute is a UIColor object. Use this attribute to specify the color of the background area behind the text. If you do not specify this attribute, no background color is dattributesn.
      */
     public func backgroundColor(_ value: UIColor?) -> Self {
-        attributes[NSBackgroundColorAttributeName] = value
+        attributes[.backgroundColor] = value
         return self
     }
     
@@ -60,7 +60,7 @@ final public class Style {
      - Parameter value: ligature style. default is 1 – default ligatures, 0 – no ligatures
      */
     public func ligature(_ value: Int) -> Self {
-        attributes[NSLigatureAttributeName] = value
+        attributes[.ligature] = value
         return self
     }
     
@@ -70,7 +70,7 @@ final public class Style {
      - Parameter value: in points; amount to modify default kerning. 0 means kerning is disabled.
      */
     public func kerning(_ value: CGFloat) -> Self {
-        attributes[NSKernAttributeName] = value
+        attributes[.kern] = value
         return self
     }
     
@@ -80,7 +80,7 @@ final public class Style {
      - Parameter value: strikethrough style. 0 – no strikethrough
      */
     public func strikethroughStyle(_ value: Int) -> Self {
-        attributes[NSStrikethroughStyleAttributeName] = value
+        attributes[.strikethroughStyle] = value
         return self
     }
     
@@ -90,7 +90,7 @@ final public class Style {
      - Parameter value: underline style. 0 – no underline
      */
     public func underlineStyle(_ value: Int) -> Self {
-        attributes[NSUnderlineStyleAttributeName] = value
+        attributes[.underlineStyle] = value
         return self
     }
     
@@ -100,7 +100,7 @@ final public class Style {
      - Parameter value: stroke color
      */
     public func strokeColor(_ value: UIColor?) -> Self {
-        attributes[NSStrokeColorAttributeName] = value
+        attributes[.strokeColor] = value
         return self
     }
     
@@ -110,7 +110,7 @@ final public class Style {
      - Parameter value: in percent of font point size. 0 – no stroke; positive for stroke alone, negative for stroke and fill (a typical value for outlined text would be 3.0)
      */
     public func strokeWidth(_ value: CGFloat) -> Self {
-        attributes[NSStrokeWidthAttributeName] = value
+        attributes[.strokeWidth] = value
         return self
     }
     
@@ -120,7 +120,7 @@ final public class Style {
      - Parameter value: shadow text
      */
     public func shadow(_ value: NSShadow?) -> Self {
-        attributes[NSShadowAttributeName] = value
+        attributes[.shadow] = value
         return self
     }
     
@@ -130,7 +130,7 @@ final public class Style {
      - Parameter value: text effect
      */
     public func textEffect(_ value: String?) -> Self {
-        attributes[NSTextEffectAttributeName] = value
+        attributes[.textEffect] = value
         return self
     }
     
@@ -140,7 +140,7 @@ final public class Style {
      - Parameter value: attachment in text
      */
     public func attachment(_ value: NSTextAttachment?) -> Self {
-        attributes[NSAttachmentAttributeName] = value
+        attributes[.attachment] = value
         return self
     }
     
@@ -150,7 +150,7 @@ final public class Style {
      - Parameter value: URL for link
      */
     public func link(_ value: URL?) -> Self {
-        attributes[NSLinkAttributeName] = value
+        attributes[.link] = value
         return self
     }
     
@@ -160,7 +160,7 @@ final public class Style {
      - Parameter value: offset from baseline in points
      */
     public func baselineOffset(_ value: CGFloat) -> Self {
-        attributes[NSBaselineOffsetAttributeName] = value
+        attributes[.baselineOffset] = value
         return self
     }
     
@@ -170,7 +170,7 @@ final public class Style {
      - Parameter value: underline color
      */
     public func underlineColor(_ value: UIColor?) -> Self {
-        attributes[NSUnderlineColorAttributeName] = value
+        attributes[.underlineColor] = value
         return self
     }
     
@@ -180,7 +180,7 @@ final public class Style {
      - Parameter value: strikethrough color
      */
     public func strikethroughColor(_ value: UIColor?) -> Self {
-        attributes[NSStrikethroughColorAttributeName] = value
+        attributes[.strikethroughColor] = value
         return self
     }
     
@@ -190,7 +190,7 @@ final public class Style {
      - Parameter value: skew to be applied to glyphs
      */
     public func obliqueness(_ value: CGFloat) -> Self {
-        attributes[NSObliquenessAttributeName] = value
+        attributes[.obliqueness] = value
         return self
     }
     
@@ -200,7 +200,7 @@ final public class Style {
      - Parameter value: expansion factor to be applied to glyphs. 0 – no expansion
      */
     public func expansion(_ value: CGFloat) -> Self {
-        attributes[NSExpansionAttributeName] = value
+        attributes[.expansion] = value
         return self
     }
     
@@ -215,7 +215,7 @@ final public class Style {
      - Parameter value: The value 0 indicates horizontal text. The value 1 indicates vertical text.
      */
     public func verticalGlyphForm(_ value: Int) -> Self {
-        attributes[NSVerticalGlyphFormAttributeName] = value
+        attributes[.verticalGlyphForm] = value
         return self
     }
     

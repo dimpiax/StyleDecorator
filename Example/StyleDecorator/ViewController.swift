@@ -34,9 +34,9 @@ class ViewController: UIViewController {
         
         let b = Decorator(style: Style().foregroundColor(.white).backgroundColor(.black).font(UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.bold)))
         
-        let c = Decorator(style: Style().font(UIFont.systemFont(ofSize: 23, weight: UIFont.Weight.medium)).paragraphStyle(Paragraph().paragraphSpacing(10).hyphenationFactor(1).alignment(.right).raw))
+        let c = Decorator(style: Style().font(UIFont.systemFont(ofSize: 23, weight: UIFont.Weight.heavy)).paragraphStyle(Paragraph().paragraphSpacing(10).hyphenationFactor(1).alignment(.right).raw))
         
-        let d = Decorator(style: Style().font(UIFont.systemFont(ofSize: 27, weight: UIFont.Weight.heavy)).alignment(.right))
+        let d = Decorator(style: Style().font(UIFont.systemFont(ofSize: 27, weight: UIFont.Weight.black)).alignment(.right))
         
         let f = Decorator(style: Style().font(UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.thin)).alignment(.right).kerning(-0.5))
         
@@ -57,22 +57,22 @@ class ViewController: UIViewController {
         
         // You can write in syntax you prefer
         // case 1
-        let part = "We" + b + "Are" + c + "Pinto" + d
+        let part = "Bold" + b + "Heavy" + c + "Black" + d
         let titleText = "! " + part
-        var decoratedText = "Decorate your string easy" + a
+        var decoratedText = "Decorate attributed string simply" + a
             decoratedText = decoratedText + "\n\n" + titleText
-            decoratedText = decoratedText + "\n\n" + "Ideas"
-            decoratedText = decoratedText + e + "\n" + "Thinking up smart ideas"
+            decoratedText = decoratedText + "\n\n" + "Right"
+            decoratedText = decoratedText + e + "\n" + "below black rect with red line"
             decoratedText = decoratedText + f + "\n\n\nwith default attributes"
         
         label.attributedText = NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)
         
         // case 2
         let a1 = a.wrap, b1 = b.wrap, c1 = c.wrap, d1 = d.wrap, e1 = e.wrap, f1 = f.wrap
-        let titleText2 = "! " + b1("We") + c1("Are") + d1("Pinto")
-        let partA1 = a1("Decorate your string easy")
-        let partE1 = e1("Ideas")
-        let partF1 = f1("Thinking up smart ideas")
+        let titleText2 = b1("Bold") + c1("Heavy") + d1("Black")
+        let partA1 = a1("Decorate attributed string simply")
+        let partE1 = e1("Right")
+        let partF1 = f1("below black rect with red line")
         var decoratedText2 = partA1 + "\n\n"
             decoratedText2 = decoratedText2 + titleText2 + "\n\n"
             decoratedText2 = decoratedText2 + partE1

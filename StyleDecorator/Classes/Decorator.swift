@@ -34,7 +34,7 @@ public struct Decorator {
     public var styles: [(Style, NSRange)] {
         var location = 0
         return flatten().flatMap { value -> (Style, NSRange)? in
-            let count = value._text.characters.count
+            let count = value._text.count
             defer { location += count }
             
             guard let attributes = value._style else { return nil }

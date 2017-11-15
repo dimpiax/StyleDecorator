@@ -9,20 +9,20 @@ class Tests: XCTestCase {
         let white = Decorator(style: Style().font(UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.heavy)).foregroundColor(.white).backgroundColor(.black))
         let gray = Decorator(style: Style().font(UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.black)).foregroundColor(.gray))
         
-        let p1 = "We"+black
-        let p2 = "Are"+white
-        let p3 = "Pinto"+gray
+        let p1 = "Bold"+black
+        let p2 = "Heavy"+white
+        let p3 = "Black"+gray
         let set = p2+p1+p3+"😇?"
         
         let b1 = black.wrap
         let w1 = white.wrap
         let g1 = gray.wrap
         
-        XCTAssertEqual("Are"+p1.string, "AreWe")
-        XCTAssertEqual(p1.wrap("Are").string, "Are"+p1.string)
-        XCTAssertEqual((b1("We")+w1("Are")+g1("Pinto")).string, "WeArePinto")
-        XCTAssertEqual(("We"+black+"Are"+white+"Pinto"+gray).string, "WeArePinto")
-        XCTAssertEqual(set.string, "AreWePinto😇?")
+        XCTAssertEqual("Heavy"+p1.string, "HeavyBold")
+        XCTAssertEqual(p1.wrap("Heavy").string, "Heavy"+p1.string)
+        XCTAssertEqual((b1("Bold")+w1("Heavy")+g1("Black")).string, "BoldHeavyBlack")
+        XCTAssertEqual(("Bold"+black+"Heavy"+white+"Black"+gray).string, "BoldHeavyBlack")
+        XCTAssertEqual(set.string, "HeavyBoldBlack😇?")
 
         let colors = (set+"? "+p1+" "+p2+"!").styles.map { $0.0.attributes[NSAttributedStringKey.foregroundColor] as! UIColor }
         XCTAssertEqual(colors, [UIColor.white, UIColor.black, UIColor.gray, UIColor.black, UIColor.white])

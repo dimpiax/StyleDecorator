@@ -1,7 +1,6 @@
 # StyleDecorator
 
-[![Language](https://img.shields.io/badge/swift-3.0-fec42e.svg)](https://swift.org/blog/swift-3-0-released/)
-[![CI Status](http://img.shields.io/travis/dimpiax/StyleDecorator.svg?style=flat)](https://travis-ci.org/dimpiax/StyleDecorator)
+[![Language](https://img.shields.io/badge/swift-4.0-fec42e.svg)](https://swift.org/blog/swift-4-0-released/)
 [![Version](https://img.shields.io/cocoapods/v/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
 [![License](https://img.shields.io/cocoapods/l/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
 [![Platform](https://img.shields.io/cocoapods/p/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)

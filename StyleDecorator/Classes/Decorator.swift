@@ -33,7 +33,7 @@ public struct Decorator {
     /// Retrieves array with attributes for specific range
     public var styles: [(Style, NSRange)] {
         var location = 0
-        return flatten().flatMap { value -> (Style, NSRange)? in
+        return flatten().compactMap { value -> (Style, NSRange)? in
             let count = value._text.count
             defer { location += count }
             

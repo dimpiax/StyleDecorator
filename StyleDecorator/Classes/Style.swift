@@ -12,7 +12,7 @@ import UIKit
 /// Style class for easy text view attributes setup
 final public class Style {
     /// Dictionary with native attributes
-    public fileprivate(set) var attributes: [NSAttributedStringKey: Any]! = [:]
+    public fileprivate(set) var attributes: [NSAttributedString.Key: Any]! = [:]
     
     fileprivate var _paragraphStyle: NSMutableParagraphStyle?
     

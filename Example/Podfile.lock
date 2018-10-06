@@ -1,5 +1,5 @@
 PODS:
-  - StyleDecorator (0.1.0)
+  - StyleDecorator (0.4.3)
 
 DEPENDENCIES:
   - StyleDecorator (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  StyleDecorator: 38efe8049798bd52f7e479f5520df1f95c46c96d
+  StyleDecorator: f727d4c60aaf477dd6669cdbf91a7ab1e578ac69
 
 PODFILE CHECKSUM: bfba22c3d5bb5acd9eac481062efff527924dab8
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.3

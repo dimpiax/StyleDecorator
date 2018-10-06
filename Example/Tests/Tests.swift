@@ -24,7 +24,7 @@ class Tests: XCTestCase {
         XCTAssertEqual(("Bold"+black+"Heavy"+white+"Black"+gray).string, "BoldHeavyBlack")
         XCTAssertEqual(set.string, "HeavyBoldBlack😇?")
 
-        let colors = (set+"? "+p1+" "+p2+"!").styles.map { $0.0.attributes[NSAttributedStringKey.foregroundColor] as! UIColor }
+        let colors = (set+"? "+p1+" "+p2+"!").styles.map { $0.0.attributes[.foregroundColor] as! UIColor }
         XCTAssertEqual(colors, [UIColor.white, UIColor.black, UIColor.gray, UIColor.black, UIColor.white])
 
         let a = Decorator(style: Style().foregroundColor(.red))

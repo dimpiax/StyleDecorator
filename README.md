@@ -1,6 +1,6 @@
 # StyleDecorator
 
-[![Language](https://img.shields.io/badge/swift-4.0-fec42e.svg)](https://swift.org/blog/swift-4-0-released/)
+[![Language](https://img.shields.io/badge/swift-4.2-fec42e.svg)](https://swift.org/blog/swift-4-2-released/)
 [![Version](https://img.shields.io/cocoapods/v/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
 [![License](https://img.shields.io/cocoapods/l/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
 [![Platform](https://img.shields.io/cocoapods/p/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
@@ -52,7 +52,7 @@ label.attributedText = NSAttributedString(decorator: decoratedText, attributes: 
 
 ## Requirements
 
-Updated to Swift 4
+Updated to Swift 4.2
 
 ###### For Swift 3.1 version use [v.0.3.0](../../releases/tag/0.3.0)
 

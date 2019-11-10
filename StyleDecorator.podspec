@@ -48,6 +48,7 @@ label.attributedText = NSAttributedString(decorator: decoratedText, attributes: 
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Dmytro Pylypenko' => 'dimpiax@gmail.com' }
   s.source           = { :git => 'https://github.com/dimpiax/StyleDecorator.git', :tag => s.version.to_s }
+  s.swift_version    = '5.0'
   s.social_media_url = 'https://twitter.com/dimpiax'
 
   s.ios.deployment_target = '10.0'

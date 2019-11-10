@@ -44,7 +44,7 @@ label.attributedText = NSAttributedString(decorator: decoratedText, attributes: 
                        DESC
 
   s.homepage         = 'https://github.com/dimpiax/StyleDecorator'
-  s.screenshots      = 'https://github.com/dimpiax/StyleDecorator/raw/master/Example/StyleDecorator/Images.xcassets/thumbnail.imageset/thumbnail.png'
+  s.screenshots      = 'https://github.com/dimpiax/StyleDecorator/raw/master/thumbnail.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Dmytro Pylypenko' => 'dimpiax@gmail.com' }
   s.source           = { :git => 'https://github.com/dimpiax/StyleDecorator.git', :tag => s.version.to_s }

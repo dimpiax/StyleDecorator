@@ -7,7 +7,7 @@
 
 Design string simply by linking attributes.
 
-<img src=Example/StyleDecorator/Images.xcassets/thumbnail.imageset/thumbnail.png width=25% height=25% />
+<img src=thumbnail.png width=25% height=25% />
 
 ## Example
 

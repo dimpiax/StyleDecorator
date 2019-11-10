@@ -1,16 +1,8 @@
-# StyleDecorator
-
-[![Language](https://img.shields.io/badge/swift-5.0-fec42e.svg)](https://swift.org/blog/swift-5-0-released/)
-[![Version](https://img.shields.io/cocoapods/v/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
-[![License](https://img.shields.io/cocoapods/l/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
-[![Platform](https://img.shields.io/cocoapods/p/StyleDecorator.svg?style=flat)](http://cocoapods.org/pods/StyleDecorator)
-
-Design string simply by linking attributes.
-
-<img src=Example/StyleDecorator/Images.xcassets/thumbnail.imageset/thumbnail.png width=25% height=25% />
-
-## Example
-
+Pod::Spec.new do |s|
+  s.name             = 'StyleDecorator'
+  s.version          = '1.0.0'
+  s.summary          = 'Easy text styling'
+  s.description      = <<-DESC
 Create `Decorator` with specific `Style` and link it at the end of needed string or wrap for styling:
 
 ```swift
@@ -49,29 +41,17 @@ let defaultAttributes = Style()
 
 label.attributedText = NSAttributedString(decorator: decoratedText, attributes: defaultAttributes)
 ```
+                       DESC
 
-## Requirements
+  s.homepage         = 'https://github.com/dimpiax/StyleDecorator'
+  s.screenshots      = 'https://github.com/dimpiax/StyleDecorator/raw/master/Example/StyleDecorator/Images.xcassets/thumbnail.imageset/thumbnail.png'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Dmytro Pylypenko' => 'dimpiax@gmail.com' }
+  s.source           = { :git => 'https://github.com/dimpiax/StyleDecorator.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/dimpiax'
 
-### Updated to Swift 5
-#### Supports SPM
+  s.ios.deployment_target = '10.0'
 
-###### For Swift 4 version use [v.0.4.2](../../releases/tag/0.4.2)
-###### For Swift 3.1 version use [v.0.3.0](../../releases/tag/0.3.0)
-
-## Installation
-
-StyleDecorator is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "StyleDecorator"
-```
-
-## Author
-
-Dmytro Pylypenko, dimpiax@gmail.com
-
-## License
-
-StyleDecorator is available under the MIT license. See the LICENSE file for more info.
+  s.source_files = 'Sources/StyleDecorator/**/*'
+end
 

@@ -22,7 +22,7 @@ d1.wrap("Style") + d2.wrap("Decorator") + "!"
 Example:
 ```swift
 let a = Decorator(style: Style().foregroundColor(.black).kerning(-0.5).backgroundColor(.darkGray))
-let b = Decorator(style: Style().foregroundColor(.white))
+let b = Decorator(style: Style().foregroundColor(.white).backgroundColor(.black))
 let c = Decorator(style: Style().foregroundColor(.gray).alignment(.right))
 
 // You can write in syntax you prefer
